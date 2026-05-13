@@ -125,8 +125,11 @@ ERROR lines:
 2025-09-20 13:01:32 ERROR OverflowError en cálculo de cuotas
 2025-09-20 13:05:22 ERROR No se pudo conectar a la base de datos (request_id=8977)
 2025-09-20 13:12:16 ERROR Excepción en módulo auth: IndexError
+```
 
-
+## Service Validation Test
+(MySQL and SSH services intentionally not installed in the test environment)
+```txt
 OK: nginx service is active
 
 FAIL: mysql service is inactive. Attempting restart...
@@ -136,6 +139,7 @@ Unable to restart mysql service in test environment.
 FAIL: ssh service is inactive. Attempting restart...
 Failed to restart ssh.service: Unit ssh.service not found.
 Unable to restart ssh service in test environment.
+```
 
 ## About
 This repository was created as part of my personal learning roadmap to DevOps/SRE.
