@@ -1,73 +1,141 @@
-# Python Automation & SRE Labs 🚀
+# Linux & Python Automation Labs
 
-This repository contains **15 Python automation exercises** that progress from basic scripting to DevOps/SRE-related tasks.  
-They are organized into three levels:
+Hands-on Linux and Python automation lab focused on operational troubleshooting, service validation, monitoring, and automation tasks commonly used in IT support and infrastructure environments.
 
----
-
-## 🟢 Level 1: Fundamentals & Basic Automation
-1. Welcome script (input & output)
-2. Basic calculator (functions & conditionals)
-3. Bulk file renaming
-4. Detect duplicate files
-5. Local backup with logs
+This repository documents practical exercises designed to strengthen Linux administration, scripting, and operational problem-solving skills through simulated real-world scenarios.
 
 ---
 
-## 🟡 Level 2: System Monitoring & APIs
-6. Ping multiple servers
-7. Simple disk space monitor
-8. Consume a public REST API (JSONPlaceholder / OpenWeather)
-9. Scheduled task with cron
-10. Log file analyzer (regex, statistics)
+# Objectives
+
+- Practice Linux administration and troubleshooting fundamentals
+- Automate repetitive operational tasks using Python and Bash
+- Simulate monitoring and service validation workflows
+- Develop troubleshooting and log analysis skills
+- Build foundational knowledge for Infrastructure, IT Operations, and DevOps-oriented roles
 
 ---
 
-## 🔴 Level 3: DevOps / SRE Focus
-11. Service status checker (nginx, mysql, ssh)
-12. Git repositories bulk cloning
-13. Config file comparator
-14. Secure password generator
-15. Microservices connectivity checker (port 80/443)
+# Lab Environment
 
----
-
-## ⚙️ Tech & Tools
-- **Python 3**
-- `os`, `subprocess`, `shutil`, `logging`, `re`, `requests`, `json`, `psutil`
-- Linux environment (Ubuntu 22.04)
-- Cron for scheduling
+- Ubuntu 22.04 virtual machines
+- CLI-based troubleshooting and diagnostics
+- Local service simulations
+- Cron-based task scheduling
 - Git & GitHub for version control
 
 ---
 
-## 📂 Example Outputs
-Log analyzer:
+# Project Structure
 
+## 🟢 Level 1 — Linux & Automation Fundamentals
+
+### Welcome Script
+Basic Python input/output and terminal interaction.
+
+### Basic Calculator
+Functions, conditionals, and basic arithmetic operations.
+
+### Bulk File Renaming
+Automation script for batch file renaming operations.
+
+### Duplicate File Detector
+Script to identify duplicate files within directories.
+
+### Local Backup with Logs
+Automated local backup process with logging functionality.
+
+---
+
+## 🟡 Level 2 — Monitoring & Operational Tasks
+
+### Multi-Host Connectivity Checker
+Ping-based connectivity validation for multiple hosts.
+
+### Disk Space Monitor
+Disk usage validation and threshold monitoring.
+
+### REST API Consumer
+Interaction with public APIs using Python and JSON parsing.
+
+### Scheduled Tasks with Cron
+Automation of recurring operational tasks using cron jobs.
+
+### Log File Analyzer
+Regex-based log analysis for identifying errors, warnings, and operational anomalies.
+
+---
+
+## 🔴 Level 3 — Linux Operations & Troubleshooting
+
+### Service Status Checker
+Validation of Linux services such as Nginx, MySQL, and SSH.
+
+### Bulk Git Repository Cloner
+Automation tool for cloning multiple Git repositories.
+
+### Configuration File Comparator
+Script for identifying differences between configuration files.
+
+### Secure Password Generator
+Randomized password generation using Python.
+
+### Service Connectivity Validator
+Port validation and connectivity testing for simulated services.
+
+---
+
+# Technologies & Tools
+
+- Python 3
+- Bash scripting
+- Linux (Ubuntu 22.04)
+- Git & GitHub
+- Cron
+- CLI networking tools
+
+### Python Libraries
+
+- os
+- subprocess
+- shutil
+- logging
+- re
+- requests
+- json
+- psutil
+
+---
+
+# Example Outputs
+
+## Log Analyzer
+
+```txt
 Log stats:
-  ERROR: 44
-  INFO: 99
-  WARNING: 42
-  DEBUG: 15
+ERROR: 44
+INFO: 99
+WARNING: 42
+DEBUG: 15
 
 ERROR lines:
-  2025-09-20 13:00:00 ERROR OverflowError en cálculo de cuotas (request_id=9845)
-  2025-09-20 13:01:09 ERROR Timeout en servicio externo
-  2025-09-20 13:01:32 ERROR OverflowError en cálculo de cuotas
-  2025-09-20 13:05:22 ERROR No se pudo conectar a la base de datos (request_id=8977)
-  2025-09-20 13:12:16 ERROR Excepción en módulo auth: IndexError
+
+2025-09-20 13:00:00 ERROR OverflowError en cálculo de cuotas (request_id=9845)
+2025-09-20 13:01:09 ERROR Timeout en servicio externo
+2025-09-20 13:01:32 ERROR OverflowError en cálculo de cuotas
+2025-09-20 13:05:22 ERROR No se pudo conectar a la base de datos (request_id=8977)
+2025-09-20 13:12:16 ERROR Excepción en módulo auth: IndexError
 
 
-Service test (microservices, simulated):
+OK: nginx service is active
 
-OK: nginx se encuentra activo
-FAIL: mysql se encuentra inactivo. Intentando reiniciar... # No tengo instalado mysql en mi maquina virtual jaja 
+FAIL: mysql service is inactive. Attempting restart...
 Failed to restart mysql.service: Unit mysql.service not found.
- No se pudo reiniciar mysql (revisa permisos o logs)
-FAIL: ssh se encuentra inactivo. Intentando reiniciar...  
-Failed to restart ssh.service: Unit ssh.service not found. # tampoco lo tengo instalado
- No se pudo reiniciar ssh (revisa permisos o logs)
+Unable to restart mysql service in test environment.
 
+FAIL: ssh service is inactive. Attempting restart...
+Failed to restart ssh.service: Unit ssh.service not found.
+Unable to restart ssh service in test environment.
 
 ## About
 This repository was created as part of my personal learning roadmap to DevOps/SRE.
