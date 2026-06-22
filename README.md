@@ -1,4 +1,4 @@
-# Linux & Python Automation Labs
+# Linux Operations & Automation Labs
 
 Hands-on Linux and Python automation lab focused on operational troubleshooting, service validation, monitoring, and automation tasks commonly used in IT support and infrastructure environments.
 
